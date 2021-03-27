@@ -6,6 +6,8 @@ public class CharacterControl : MonoBehaviour
 {
     private Animator playerAnim;
     private Transform initialRotation;
+    private float touchStart;
+    public GameObject parent;
     
     private void Start()
     {
@@ -13,9 +15,35 @@ public class CharacterControl : MonoBehaviour
         playerAnim = gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+
+    private void SwipeLeft()
+    {
+        parent.transform.position = Vector3.Slerp(
+            new Vector3(parent.transform.position.x, parent.transform.position.y, parent.transform.position.y),
+            new Vector3(parent.transform.position.x - 2, parent.transform.position.y, parent.transform.position.y), 0.5f);
+    }
+
+    private void SwipeRight()
+    {
+        parent.transform.position = Vector3.Slerp(
+            new Vector3(parent.transform.position.x, parent.transform.position.y, parent.transform.position.y),
+            new Vector3(parent.transform.position.x + 2, parent.transform.position.y, parent.transform.position.y), 0.5f);
+    }
+    
     private void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+            touchStart = Input.mousePosition.x;
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            float delta = Input.mousePosition.x - touchStart;
+            if (delta < -200.0f)
+                SwipeLeft();
+            else if (delta > 200.0f)
+                SwipeRight();
+        }
+
         if (Input.GetKeyUp(KeyCode.Space) && !playerAnim.GetBool("isAttack") && !playerAnim.GetBool("isAttack2") && !playerAnim.GetBool("isDead"))
         {
             if (Random.Range(0, 2) == 0)
