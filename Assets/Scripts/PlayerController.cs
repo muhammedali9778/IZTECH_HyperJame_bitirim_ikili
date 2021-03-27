@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space) && !playerAnim.GetBool("isAttack") && !playerAnim.GetBool("isAttack2") && !playerAnim.GetBool("isDead"))
         {
-            if (Random.Range(0, 2) == 0)
+            if (Random.Range(0, 2) == -1)
             {
                 playerAnim.SetBool("isAttack", true);
             }
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         {
             targetPosition += Vector3.right * laneDistance;
         }
-        transform.position = targetPosition;
+        transform.position = Vector3.Lerp(transform.position,targetPosition,2000*Time.deltaTime);
     }
     public void AttackEnded()
     {

@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40bc183b301b2244c8a203e5458c306d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 0
+  forwardSpeed: 10
   laneDistance: 1
 --- !u!143 &163418437
 CharacterController:
