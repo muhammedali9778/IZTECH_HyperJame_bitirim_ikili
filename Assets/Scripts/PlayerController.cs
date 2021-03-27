@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private Vector3 direction;
     public float forwardSpeed;
+    private int desiredLane = 0;
+    public float laneDistance = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,33 @@ public class PlayerController : MonoBehaviour
                 playerAnim.SetBool("isAttack2", true);
             }
         }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            desiredLane++;
+            if (desiredLane==2)
+            {
+                desiredLane = 1;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            desiredLane--;
+            if (desiredLane == -2)
+            {
+                desiredLane = -1;
+            }
+        }
 
+        Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
+        if (desiredLane==-1)
+        {
+            targetPosition += Vector3.left * laneDistance;
+        }
+        else if(desiredLane == 1)
+        {
+            targetPosition += Vector3.right * laneDistance;
+        }
+        transform.position = targetPosition;
     }
     public void AttackEnded()
     {
