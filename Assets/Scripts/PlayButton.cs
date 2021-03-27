@@ -22,5 +22,6 @@ public class PlayButton : MonoBehaviour
     public void PlayScene()
     {
         SceneManager.LoadScene("Level1");
+        Time.timeScale = 1;
     }
 }
