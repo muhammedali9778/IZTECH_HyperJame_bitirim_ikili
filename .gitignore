@@ -58,5 +58,13 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-*.wav
-*.meta
+Assets/Fantasy Music Collection Lite/cursed_krypta_minimum_loop.wav
+Assets/Fantasy Music Collection Lite/desert_solo_loop.wav
+Assets/Fantasy Music Collection Lite/encounter_loop.wav
+Assets/Fantasy Music Collection Lite/frozen_lands_short_loop.wav
+Assets/Fantasy Music Collection Lite/grassland_short_loop.wav
+Assets/Fantasy Music Collection Lite/hurry_percussion_only_loop.wav
+Assets/Fantasy Music Collection Lite/tension_loop.wav
+Assets/Fantasy Music Collection Lite/tavern_loop.wav
+Assets/Fantasy Music Collection Lite/natural_cave_loop.wav
+Assets/Fantasy Music Collection Lite/lower_cavern_loop.wav
