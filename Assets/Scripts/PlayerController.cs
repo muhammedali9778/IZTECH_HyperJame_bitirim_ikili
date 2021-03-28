@@ -24,16 +24,31 @@ public class PlayerController : MonoBehaviour
     {
         direction.z = forwardSpeed;
 
-        
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (SwipeManager.swipeRight)
         {
             desiredLane++;
-            if (desiredLane==2)
+            if (desiredLane == 2)
             {
                 desiredLane = 1;
             }
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        //if (Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    desiredLane++;
+        //    if (desiredLane==2)
+        //    {
+        //        desiredLane = 1;
+        //    }
+        //}
+        //if (Input.GetKeyDown(KeyCode.LeftArrow))
+        //{
+        //    desiredLane--;
+        //    if (desiredLane == -2)
+        //    {
+        //        desiredLane = -1;
+        //    }
+        //}
+        if (SwipeManager.swipeLeft)
         {
             desiredLane--;
             if (desiredLane == -2)
@@ -41,7 +56,6 @@ public class PlayerController : MonoBehaviour
                 desiredLane = -1;
             }
         }
-
         Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
         if (desiredLane==-1)
         {
