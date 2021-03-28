@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.IZTECH_HyperJame_bitirim_ikili2.iml
+# Datasource local storage ignored files
+/../../../../../../../../../:\Users\ALİ UMUR KUCUR\Documents\GitHub\IZTECH_HyperJame_bitirim_ikili2\.idea\.idea.IZTECH_HyperJame_bitirim_ikili2\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

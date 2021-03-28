@@ -5,15 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class DeathMenu : MonoBehaviour
 {
-   public string mainMenuLevel;
 
    public void RestartGame()
    {
       SceneManager.LoadScene("Level1");
    }
 
-   public void ExitGame()
+   public void MainMenuGame()
    {
-      Application.Quit();
+      SceneManager.LoadScene("MainMenu");
    }
 }

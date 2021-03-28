@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 56113b3b655ab7349bab4d7d405c258a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 163418435}
   - component: {fileID: 163418437}
   - component: {fileID: 163418436}
+  - component: {fileID: 163418438}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -640,6 +641,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &163418438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163418433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff30a29f3b92da4ea9cf719c3a260a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &314286529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,5 +2254,9 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: cd32c1e53f408c67c8b03cc255db03b0, type: 2}
+    - target: {fileID: 137707879336973850, guid: 5b5b1958cdf88ce49989e326859b9572, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b5b1958cdf88ce49989e326859b9572, type: 3}
